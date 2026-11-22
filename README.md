@@ -1,67 +1,124 @@
-PAC-MAN — Jogo desenvolvido em C++ e SDL2
+# PAC-MAN
 
-Desenvolvedor: Agnaldo Alves Barreto
-Ano de desenvolvimento: 2026
+Jogo desenvolvido em **C++** com a biblioteca **SDL2**.
 
----
+**Desenvolvedor:** Agnaldo Alves Barreto\
+**Ano:** 2026
 
-Sobre o jogo
+------------------------------------------------------------------------
 
-Este jogo é um projeto independente inspirado no clássico Pac-Man, desenvolvido em C++ utilizando a biblioteca SDL2.
+## Sobre o jogo
 
-O objetivo é percorrer os labirintos, coletar todos os itens e escapar dos fantasmas. O jogo possui diferentes níveis e inteligência artificial própria para controlar o comportamento dos fantasmas.
+Este projeto é uma versão autoral de um jogo inspirado no clássico
+Pac-Man. Foi desenvolvido em C++ utilizando a biblioteca SDL2, com foco
+em programação de jogos, lógica, movimentação, colisões, renderização e
+inteligência artificial.
 
-Características
+O jogo possui labirintos, guloseimas para coletar, pílulas de energia e
+fantasmas com comportamentos próprios.
 
-- Sistema de labirintos e progressão de níveis.
-- Inteligência artificial dos fantasmas.
-- Algoritmo BFS para busca de caminhos.
-- Comportamentos de perseguição, fuga e patrulhamento.
-- Sistema de colisões.
-- Animações dos personagens.
-- Pontuação e efeitos sonoros.
-- Sistema de temporização e controle de jogo.
+## Tecnologias utilizadas
 
-Como jogar
+-   C++
+-   SDL2
+-   Visual Studio 2022
 
-1. Baixe o jogo disponibilizado neste repositório.
-2. Extraia os arquivos para uma pasta no computador.
-3. Mantenha a pasta "dados" junto ao executável.
-4. Execute o arquivo "PacMan.exe".
+## Características
 
-Importante: não remova os arquivos da pasta "dados", pois eles são necessários para o funcionamento do jogo.
+-   Jogo 2D inspirado no estilo clássico de Pac-Man.
+-   Labirintos editáveis por arquivo de texto.
+-   Coleta de guloseimas e pílulas de energia.
+-   Fantasmas com inteligência artificial.
+-   Algoritmo de busca em largura (BFS) para busca de caminhos.
+-   Comportamentos de perseguição, fuga, patrulhamento e retorno à casa.
+-   Detecção de colisões.
+-   Animações e movimentação dos personagens.
+-   Sistema de pontuação, vidas e níveis.
+-   Controle de tempo e atualização do jogo.
 
-Distribuição e direitos autorais
+## Como executar
 
-Este jogo é disponibilizado gratuitamente para download e uso pessoal.
+1.  Baixe o pacote do jogo disponibilizado neste
+    repositório.
+2.  Extraia todos os arquivos do ZIP para uma pasta.
+3.  Mantenha o executável, as bibliotecas necessárias e a pasta `dados`
+    juntos, respeitando a estrutura distribuída.
+4.  Execute `PacMan.exe`.
 
-É permitido:
+> O nome do executável pode variar conforme a versão publicada. Se o
+> Windows informar que falta uma DLL, verifique se todos os arquivos do
+> pacote foram extraídos e mantidos na mesma estrutura. Não baixe DLLs
+> de sites desconhecidos.
 
-- Baixar e jogar gratuitamente.
-- Compartilhar o link oficial deste repositório.
-- Recomendar o jogo a outras pessoas.
+## Edição e personalização dos labirintos
 
-Não é permitido, sem autorização expressa do desenvolvedor:
+Uma característica do jogo é permitir a edição dos labirintos por meio
+de um arquivo de texto.
 
-- Vender ou comercializar o jogo.
-- Redistribuir o executável em pacotes comerciais.
-- Modificar e comercializar versões derivadas.
-- Utilizar o jogo para exploração econômica.
+Os mapas utilizados pelo jogo ficam no arquivo:
 
-O código-fonte não está incluído nesta distribuição.
+`dados/labirinto.txt`
 
-Todos os direitos autorais sobre o código e os elementos originais desenvolvidos para o projeto são reservados ao autor, respeitados os direitos e as licenças de terceiros sobre bibliotecas e recursos utilizados.
+É possível abrir esse arquivo em um editor de texto, como o Bloco de
+Notas, e modificar o desenho dos cinco labirintos sem precisar alterar
+ou recompilar o código-fonte.
 
-Para solicitar autorização de uso comercial, entre em contato com o desenvolvedor.
+Cada mapa deve manter a estrutura de **25 linhas por 21 colunas**.
 
-Contato
+### Legenda dos caracteres
 
-Desenvolvedor: Agnaldo Alves Barreto
+-   `#` --- Parede
+-   `_` --- Caminho vazio
+-   `P` --- Pílula de energia
+-   `0` a `9` --- Guloseimas
+-   `CCC` --- Casa dos fantasmas
+-   `J` --- Posição inicial do jogador
 
+### Cuidados ao editar
+
+-   Mantenha cada mapa com 25 linhas e 21 colunas.
+-   Preserve os caracteres utilizados pelo jogo.
+-   Cada labirinto precisa ter uma posição inicial válida para o jogador
+    (`J`).
+-   Cada labirinto precisa ter uma casa dos fantasmas válida (`CCC`).
+-   Evite apagar ou acrescentar caracteres sem conferir o tamanho das
+    linhas.
+-   Os mapas são separados por linhas em branco no arquivo.
+
+As alterações feitas em `labirinto.txt` são carregadas pelo jogo quando
+ele inicia.
+Se ocasionar algum erro na inicialização,
+um arquivo Erro.txt será criado na pasta do executável
+reportando o problema.
+
+## Distribuição e direitos autorais
+
+Este projeto é disponibilizado gratuitamente para fins pessoais e
+educacionais.
+
+É permitido baixar, executar e compartilhar o link da página oficial do
+projeto, mantendo os créditos do autor.
+
+**Não é permitido vender o jogo, cobrar pelo acesso, redistribuí-lo
+comercialmente ou utilizá-lo em atividades com finalidade comercial sem
+autorização prévia e por escrito do autor.**
+
+O código-fonte não faz parte desta distribuição pública. A
+disponibilização do executável não transfere a propriedade intelectual
+do projeto.
+
+O projeto pode utilizar bibliotecas, ferramentas ou outros recursos de
+terceiros, que permanecem sujeitos às respectivas licenças e condições
+de uso.
+
+Para solicitar autorização de uso comercial ou esclarecer dúvidas sobre
+a distribuição, entre em contato com o autor.
+
+## Contato
+
+**Agnaldo Alves Barreto**\
 E-mail: agnaldo_alves_barreto@hotmail.com
 
-Dúvidas, sugestões, comentários ou solicitações de autorização comercial são bem-vindos.
+------------------------------------------------------------------------
 
----
-
-Obrigado por conhecer e experimentar meu jogo!
+Obrigado por conhecer e experimentar o projeto!
